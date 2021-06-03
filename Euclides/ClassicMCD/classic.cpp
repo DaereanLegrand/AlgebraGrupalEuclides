@@ -8,7 +8,7 @@
 using namespace std;
 using namespace NTL;
 
-/*ZZ modulo (ZZ a,ZZ n, char val)
+ZZ modulo (ZZ a,ZZ n, char val)
 {
 	//a = q*n + r  //0 =< r < n
 	ZZ q, r;
@@ -31,14 +31,6 @@ using namespace NTL;
         return r;
     }
 
-}*/
-
-ZZ mod(ZZ a, ZZ b)
-{
-    ZZ r;
-    r = a - b * (a / b);
-    r = r + (r < 0) * b;
-    return r;
 }
 
 ZZ euclides (ZZ x, ZZ y, bool pasos)
