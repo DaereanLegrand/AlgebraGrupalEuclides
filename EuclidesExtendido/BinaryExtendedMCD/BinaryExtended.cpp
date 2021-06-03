@@ -4,13 +4,21 @@
 using namespace NTL;
 using namespace std;
 
-ZZ mimodulo(ZZ x, ZZ y)
+/*ZZ mimodulo(ZZ x, ZZ y)
 {
     ZZ div; div = x / y;
     ZZ modulo; modulo = -(div * y) + x;
     if (modulo < 0)
         modulo += y;
     return modulo;
+}*/
+
+ZZ mod(ZZ a, ZZ b)
+{
+    ZZ r;
+    r = a - b * (a / b);
+    r = r + (r < 0) * b;
+    return r;
 }
 
 ZZ potencia(ZZ x, ZZ y)
@@ -38,7 +46,7 @@ std::vector<ZZ>extendedbinaryalgorithm(ZZ x, ZZ y) {
     std::vector<ZZ>resultado;
     //Sacando factor comun de 2 a ambas variables
     while (true) {
-        if (mimodulo(U, ZZ(2)) == 0 and mimodulo(V, ZZ(2)) == 0) {
+        if (mod(U, ZZ(2)) == 0 and mod(V, ZZ(2)) == 0) {
             U = U / 2;
             V = V / 2;
             G++;
@@ -49,7 +57,7 @@ std::vector<ZZ>extendedbinaryalgorithm(ZZ x, ZZ y) {
 
     }
     while (U != V) {
-        if (mimodulo(U, ZZ(2)) == 1) {
+        if (mod(U, ZZ(2)) == 1) {
             if (U > V) {
                 U = U - V;
                 A = A - B;
@@ -63,7 +71,7 @@ std::vector<ZZ>extendedbinaryalgorithm(ZZ x, ZZ y) {
         }
         else {
             U = U / 2;
-            if (mimodulo(A, ZZ(2)) == 0 and mimodulo(B, ZZ(2)) == 0) {
+            if (mod(A, ZZ(2)) == 0 and mod(B, ZZ(2)) == 0) {
                 A = A / 2;
                 C = C / 2;
             }
