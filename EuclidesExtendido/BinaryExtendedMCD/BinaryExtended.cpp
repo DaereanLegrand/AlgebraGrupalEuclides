@@ -46,7 +46,7 @@ std::vector<ZZ>extendedbinaryalgorithm(ZZ x, ZZ y) {
     std::vector<ZZ>resultado;
     //Sacando factor comun de 2 a ambas variables
     while (true) {
-        if (mod(U, ZZ(2)) == 0 and mod(V, ZZ(2)) == 0) {
+        if (mod(U, ZZ(2)) == 0 && mod(V, ZZ(2)) == 0) {
             U = U / 2;
             V = V / 2;
             G++;
