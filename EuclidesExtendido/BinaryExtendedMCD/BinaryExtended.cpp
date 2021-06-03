@@ -91,5 +91,4 @@ int main()
 {
     ZZ a,b;a=305;b=144;
     printvector(extendedbinaryalgorithm(a,b));
-
 }
