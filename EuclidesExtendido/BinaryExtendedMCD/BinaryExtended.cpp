@@ -91,12 +91,12 @@ std::vector<ZZ>extendedbinaryalgorithm(ZZ x, ZZ y) {
 
 void printvector(std::vector<ZZ>a) {
     for (int i = 0; i < a.size(); i++) {
-        std::cout << "\nExtended binary: " << a[i];
+        //std::cout << "\nExtended binary: " << a[i];
     }
 }
 
 int main()
 {
-    ZZ a,b;a=305;b=144;
+    ZZ a,b;a=193;b=157;
     printvector(extendedbinaryalgorithm(a,b));
 }
