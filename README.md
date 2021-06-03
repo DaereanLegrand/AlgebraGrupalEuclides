@@ -4,5 +4,5 @@
 - Frank Roger Salas Ticona
 -
 - Fabián Santiago Concha Sifuentes
--
+-Sebastián Tinajeros Estrada
 - Sebastian Gonzalo Postigo Avalos
