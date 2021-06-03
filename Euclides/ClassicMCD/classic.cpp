@@ -47,15 +47,6 @@ int main(){
     ZZ a,b,c,d;
 	a = conv<ZZ>"193";
 	b = conv<ZZ>"157";
-
-	cout<<"a: "<<a<<endl;
-	cout<<"b: "<<b<<endl;
-
-
-	cout<<"Euclides Clasico: "<<endl;
-	cout<<a<<"= q*"<<b<<" + r"<<endl;
-	cout<<"======================================================="<<endl;
 	d = euclides(a, b);
-    cout<<"Mcd: "<<d<<endl;
 }
 
