@@ -8,49 +8,36 @@
 using namespace std;
 using namespace NTL;
 
-ZZ modulo (ZZ a,ZZ n, char val)
+ZZ modulo (ZZ a,ZZ n)
 {
 	//a = q*n + r  //0 =< r < n
 	ZZ q, r;
-
-	q = a / n;
-    r = a - (q * n);
 
 	if (r<0)
 	{
 		q = q-1;
 		r = a -(a / n) * n;
 	}
-
-	if (val=='q')
-    {
-        return q;
-    }
-    else if (val == 'r')
-    {
+	else
+	{
+		q = a / n;
+		r = a - (q * n);
+	}
         return r;
-    }
-    else return ZZ(-1);
 }
-
-ZZ euclides (ZZ x, ZZ y, bool pasos)
+ZZ euclides (ZZ x, ZZ y)
 {
 	ZZ q,r;
-	q = modulo(x,y,'q');
-	r = modulo(x,y,'r');
+	q = x/y;
+	r = modulo(x,y);
 
 	while (r!=0)
 	{
 		x = y;
 		y = r;
-		q = modulo(x,y,'q');
-		r = modulo(x,y,'r');
+		q = x/y;
+		r = modulo(x,y);
 		x = q*y + r;
-		if (pasos == true)
-        {
-            cout<< x <<"="<< q <<"*"<< y <<"+"<< r <<endl;
-            cout<<"======================================================="<<endl;
-        }
 	}
 	return y;
 }
@@ -64,7 +51,7 @@ ZZ euclidesext(ZZ a, ZZ b)
 	s2 = 0;
 	t1 = 0;
 	t2 = 1;
-	d = euclides(a,b,false);
+	d = euclides(a,b);
 	ZZ r, s, t;
 
 	while (r2>0)
@@ -82,18 +69,7 @@ ZZ euclidesext(ZZ a, ZZ b)
 		t = t1 - (q*t2);
 		t1 = t2;
 		t2 = t;
-		/*cout<<"r1: "<<r1<<endl;
-		cout<<"r2: "<<r2<<endl;
-		cout<<"r: "<<r<<endl;
 
-		cout<<"s1: "<<s1<<endl;
-		cout<<"s2: "<<s2<<endl;
-		cout<<"s: "<<s<<endl;
-
-		cout<<"t1: "<<t1<<endl;
-		cout<<"t2: "<<t2<<endl;
-		cout<<"t: "<<t<<endl;
-		cout<<"======================================================="<<endl;*/
 		cout<<d<<"="<<a<<"*"<<s1<<"+"<<b<<"*"<<t1<<endl;
 		cout<<"======================================================="<<endl;
 	}
@@ -106,7 +82,7 @@ int main(){
     ZZ a,b,c,d;
 	a = 4095;
 	b = 3110;
-	d = euclides(a,b,false);
+	d = euclides(a,b);
 
 	cout<<"a: "<<a<<endl;
 	cout<<"b: "<<b<<endl;
