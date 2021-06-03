@@ -36,19 +36,15 @@ ZZ modulo (ZZ a,ZZ n, char val)
 ZZ euclides (ZZ x, ZZ y, bool pasos)
 {
 	ZZ q,r;
-	//q = modulo(x,y,'q');
-	//r = modulo(x,y,'r');
-	q = mod(x,y);
-	r = mod(x,y);
+	q = modulo(x,y,'q');
+	r = modulo(x,y,'r');
 
 	while (r!=0)
 	{
 		x = y;
 		y = r;
-		//q = modulo(x,y,'q');
-		//r = modulo(x,y,'r');
-		q = mod(x,y);
-		r = mod(x,y);
+		q = modulo(x,y,'q');
+		r = modulo(x,y,'r');
 		x = q*y + r;
 		if (pasos == true)
         {
