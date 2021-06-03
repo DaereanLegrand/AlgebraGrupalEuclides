@@ -103,7 +103,6 @@ ZZ euclidesext(ZZ a, ZZ b)
 }
 
 int main(){
-
     ZZ a,b,c,d;
 	a = 4095;
 	b = 3110;
@@ -116,6 +115,5 @@ int main(){
 	cout<<d<<" = "<<a<<"*x + "<<b<<"*y"<<endl;
 	cout<<"======================================================="<<endl;
 	euclidesext(a,b);
-
 }
 
