@@ -82,26 +82,26 @@ ZZ euclidesext(ZZ a, ZZ b)
 		t1 = t2;
 		t2 = t;
 
-		cout<<d<<"="<<a<<"*"<<s1<<"+"<<b<<"*"<<t1<<endl;
-		cout<<"======================================================="<<endl;
+		//cout<<d<<"="<<a<<"*"<<s1<<"+"<<b<<"*"<<t1<<endl;
+		//cout<<"======================================================="<<endl;
 	}
-	cout<<"x = "<<s1<<endl;
-	cout<<"y = "<<t1<<endl;
+	//cout<<"x = "<<s1<<endl;
+	//cout<<"y = "<<t1<<endl;
 	return s1;
 }
 
 int main(){
     ZZ a,b,c,d;
-	a = 4095;
-	b = 3110;
+	a = 193;
+	b = 157;
 	d = euclides(a,b);
 
-	cout<<"a: "<<a<<endl;
-	cout<<"b: "<<b<<endl;
+	//cout<<"a: "<<a<<endl;
+	//cout<<"b: "<<b<<endl;
 
-	cout<<"Euclides extendido: "<<endl;
-	cout<<d<<" = "<<a<<"*x + "<<b<<"*y"<<endl;
-	cout<<"======================================================="<<endl;
+	//cout<<"Euclides extendido: "<<endl;
+	//cout<<d<<" = "<<a<<"*x + "<<b<<"*y"<<endl;
+	//cout<<"======================================================="<<endl;
 	euclidesext(a,b);
 }
 
