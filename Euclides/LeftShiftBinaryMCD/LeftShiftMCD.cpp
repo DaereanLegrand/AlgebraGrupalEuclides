@@ -50,6 +50,5 @@ ZZ AlgoritmoLSBGCD(ZZ a, ZZ b) {
 
 int main()
 {
-    ZZ a,b; a=305; b=144;
-    std::cout << "\n Algoritmo LBGCD: " << AlgoritmoLSBGCD(a, b);
+    ZZ a,b; a=193; b=157;
 }
