@@ -30,8 +30,9 @@ ZZ modulo (ZZ a,ZZ n, char val)
     {
         return r;
     }
-
+    else return ZZ(-1);
 }
+
 ZZ euclides (ZZ x, ZZ y, bool pasos)
 {
 	ZZ q,r;
