@@ -8,7 +8,7 @@
 using namespace std;
 using namespace NTL;
 
-ZZ modulo (ZZ a,ZZ n)
+/*ZZ modulo (ZZ a,ZZ n)
 {
 	//a = q*n + r  //0 =< r < n
 	ZZ q, r;
@@ -24,19 +24,31 @@ ZZ modulo (ZZ a,ZZ n)
 		r = a - (q * n);
 	}
         return r;
+}*/
+
+ZZ mod(ZZ a, ZZ b)
+{
+    ZZ r;
+    r = a - b * (a / b);
+    r = r + (r < 0) * b;
+    return r;
 }
+
 ZZ euclides (ZZ x, ZZ y)
 {
 	ZZ q,r;
 	q = x/y;
-	r = modulo(x,y);
+	//r = modulo(x,y);
+	r = mod(x,y);
+	
 
 	while (r!=0)
 	{
 		x = y;
 		y = r;
 		q = x/y;
-		r = modulo(x,y);
+		//r = modulo(x,y);
+		r = mod(x,y);
 		x = q*y + r;
 	}
 	return y;
