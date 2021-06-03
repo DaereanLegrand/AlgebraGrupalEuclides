@@ -8,7 +8,7 @@
 using namespace std;
 using namespace NTL;
 
-ZZ modulo (ZZ a,ZZ n)
+/*ZZ modulo (ZZ a,ZZ n)
 {
 	//a = q*n + r  //0 =< r < n
 	ZZ q, r;
@@ -24,19 +24,31 @@ ZZ modulo (ZZ a,ZZ n)
 		r = a - (q * n);
 	}
         return r;
+}*/
+
+ZZ mod(ZZ a, ZZ b)
+{
+    ZZ r;
+    r = a - b * (a / b);
+    r = r + (r < 0) * b;
+    return r;
 }
+
 ZZ euclides (ZZ x, ZZ y)
 {
 	ZZ q,r;
 	q = x/y;
-	r = modulo(x,y);
+	//r = modulo(x,y);
+	r = mod(x,y);
+	
 
 	while (r!=0)
 	{
 		x = y;
 		y = r;
 		q = x/y;
-		r = modulo(x,y);
+		//r = modulo(x,y);
+		r = mod(x,y);
 		x = q*y + r;
 	}
 	return y;
@@ -70,26 +82,26 @@ ZZ euclidesext(ZZ a, ZZ b)
 		t1 = t2;
 		t2 = t;
 
-		cout<<d<<"="<<a<<"*"<<s1<<"+"<<b<<"*"<<t1<<endl;
-		cout<<"======================================================="<<endl;
+		//cout<<d<<"="<<a<<"*"<<s1<<"+"<<b<<"*"<<t1<<endl;
+		//cout<<"======================================================="<<endl;
 	}
-	cout<<"x = "<<s1<<endl;
-	cout<<"y = "<<t1<<endl;
+	//cout<<"x = "<<s1<<endl;
+	//cout<<"y = "<<t1<<endl;
 	return s1;
 }
 
 int main(){
     ZZ a,b,c,d;
-	a = 4095;
-	b = 3110;
+	a = 193;
+	b = 157;
 	d = euclides(a,b);
 
-	cout<<"a: "<<a<<endl;
-	cout<<"b: "<<b<<endl;
+	//cout<<"a: "<<a<<endl;
+	//cout<<"b: "<<b<<endl;
 
-	cout<<"Euclides extendido: "<<endl;
-	cout<<d<<" = "<<a<<"*x + "<<b<<"*y"<<endl;
-	cout<<"======================================================="<<endl;
+	//cout<<"Euclides extendido: "<<endl;
+	//cout<<d<<" = "<<a<<"*x + "<<b<<"*y"<<endl;
+	//cout<<"======================================================="<<endl;
 	euclidesext(a,b);
 }
 

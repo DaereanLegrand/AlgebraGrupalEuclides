@@ -16,12 +16,11 @@ ZZ Menor_resto(ZZ a, ZZ b){
 		a=b;
 		b=abs(r);
 	}
-	cout<<"\nel mcd de menor resto es: "<<a<<endl;
-	}
+}
 
 int main (){
-	ZZ a; a=842780;
-	ZZ b; b=253013;
+	ZZ a; a=ZZ(193);
+	ZZ b; b=ZZ(157);
 
 	Menor_resto(a,b);
 }
