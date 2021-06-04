@@ -74,6 +74,6 @@ ZZ binario (ZZ a, ZZ b)
 
 int main(){
 	ZZ a, b;
-	a=3111;
-	b=4092;
+	a = conv<ZZ>("38783");
+	b = conv<ZZ>("38299");
 }
