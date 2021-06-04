@@ -97,6 +97,6 @@ void printvector(std::vector<ZZ>a) {
 
 int main()
 {
-    ZZ a,b;a=193;b=157;
+    ZZ a = conv<ZZ>("193") ,b = conv<ZZ>("157");
     printvector(extendedbinaryalgorithm(a,b));
 }

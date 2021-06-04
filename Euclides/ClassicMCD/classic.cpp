@@ -45,8 +45,8 @@ ZZ euclides (ZZ x, ZZ y)
 int main(){
 
     ZZ a,b,c,d;
-	a = conv<ZZ>"193";
-	b = conv<ZZ>"157";
+	a = conv<ZZ>("193");
+	b = conv<ZZ>("157");
 	d = euclides(a, b);
 }
 

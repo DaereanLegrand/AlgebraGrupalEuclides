@@ -19,8 +19,8 @@ ZZ Menor_resto(ZZ a, ZZ b){
 }
 
 int main (){
-	ZZ a; a=ZZ(193);
-	ZZ b; b=ZZ(157);
+	ZZ a = conv<ZZ>("193");
+	ZZ b = conv<ZZ>("157");
 
 	Menor_resto(a,b);
 }

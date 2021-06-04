@@ -51,5 +51,5 @@ ZZ AlgoritmoLSBGCD(ZZ a, ZZ b) {
 int main()
 {
     ZZ a,b; a=193; b=157;
-    ZZ c; c=AlgoritmoLSBGCD(193,157);
+    ZZ c; c=AlgoritmoLSBGCD(a, b);
 }
