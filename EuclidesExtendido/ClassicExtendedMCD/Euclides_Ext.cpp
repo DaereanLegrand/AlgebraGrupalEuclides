@@ -92,8 +92,8 @@ ZZ euclidesext(ZZ a, ZZ b)
 
 int main(){
     ZZ a,b,c,d;
-	a = conv<ZZ>("193");
-	b = conv<ZZ>("157");
+	a = conv<ZZ>("38783");
+	b = conv<ZZ>("38299");
 	d = euclides(a,b);
 
 	//cout<<"a: "<<a<<endl;
