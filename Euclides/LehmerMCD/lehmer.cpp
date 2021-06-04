@@ -113,5 +113,5 @@ int main()
 	    b = conv<ZZ>("83825486427085367934112210589772991484453445136409752382569536656995452034661");
         ZZ b;
         b = 1000;
-        ZZ res = classicEuclides(x, y);
+        ZZ res = lehmerGCD(x, y, b);
 }
