@@ -22,7 +22,7 @@ ZZ Menor_resto(ZZ a, ZZ b){
 int main (){
 	ZZ a;
 	ZZ b;
-	a = conv<ZZ>(38783);
-	b = conv<ZZ>(38299);
+	a = conv<ZZ>("38783");
+	b = conv<ZZ>("38299");
 	Menor_resto(a,b);
 }

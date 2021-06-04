@@ -51,7 +51,7 @@ ZZ AlgoritmoLSBGCD(ZZ a, ZZ b) {
 int main()
 {
     ZZ a,b;
-    a = conv<ZZ>(38783);
-	b = conv<ZZ>(38299);
+    a = conv<ZZ>("38783");
+	b = conv<ZZ>("38299");
     ZZ c; c=AlgoritmoLSBGCD(a,b);
 }
