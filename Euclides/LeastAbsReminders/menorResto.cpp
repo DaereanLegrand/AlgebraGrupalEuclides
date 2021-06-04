@@ -20,7 +20,7 @@ void Menor_resto(RR a, RR b){
 		bZZ=abs(rZZ);
 		conv(r,rZZ); conv(a,aZZ); conv(b,bZZ);
 	}
-        cout<<" Menor resto: "<<a
+        cout<<" Menor resto: "<<a;
 }
 
 int main (){
