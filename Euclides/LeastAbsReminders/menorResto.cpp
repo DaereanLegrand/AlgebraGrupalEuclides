@@ -1,28 +1,32 @@
 #include <iostream>
 #include <stdlib.h>
 #include <NTL/ZZ.h>
+#include <NTL/RR.h>
 using namespace NTL;
 using namespace std;
 
-ZZ Menor_resto(ZZ a, ZZ b){
-    ZZ r; r=1;
-	ZZ aux; aux=0.5;
+void Menor_resto(RR a, RR b){
+    RR r; r=1;
+    ZZ rZZ,aZZ,bZZ;
+	RR aux; aux=0.5;
 
 	while (r>0)
 	{
 		r=a/b+aux;
-		r=a-(b*(r));
-		r=abs(r);
-		a=b;
-		b=abs(r);
+		conv(rZZ,r); conv(aZZ,a); conv(bZZ,b);
+		rZZ=aZZ-(bZZ*(rZZ));
+		rZZ=abs(rZZ);
+		aZZ=bZZ;
+		bZZ=abs(rZZ);
+		conv(r,rZZ); conv(a,aZZ); conv(b,bZZ);
 	}
-    return a;
-}
+	cout<<"\nel mcd de menor resto es: "<<a<<endl;
+	}
 
 int main (){
-	ZZ a;
-	ZZ b;
-	a = conv<ZZ>(38783);
-	b = conv<ZZ>(38299);
+	RR a; a=542312;
+	RR b; b=442321;
+
 	Menor_resto(a,b);
 }
+
