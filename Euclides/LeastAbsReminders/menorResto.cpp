@@ -16,6 +16,7 @@ ZZ Menor_resto(ZZ a, ZZ b){
 		a=b;
 		b=abs(r);
 	}
+    return a;
 }
 
 int main (){

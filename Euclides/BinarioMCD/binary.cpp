@@ -31,7 +31,7 @@ ZZ modulo (ZZ a,ZZ n, char val)
     {
         return r;
     }
-
+    return r;
 }
 ZZ binario (ZZ a, ZZ b)
 {
@@ -71,12 +71,9 @@ ZZ binario (ZZ a, ZZ b)
 	}
 	return b;
 }
-main(){
+
+int main(){
 	ZZ a, b;
 	a=3111;
 	b=4092;
-
-    cout<<"a: "<<a<<endl;
-    cout<<"b: "<<b<<endl;
-	cout<<"el mcd es con Binario: "<<binario(a,b)<<endl;
 }
